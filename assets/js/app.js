@@ -16,7 +16,7 @@ const validType = {
 }
 
 // user inputs elements
-let firstnameElem = mainForm.firstname,
+let primernombreElem = mainForm.primernombre,
     middlenameElem = mainForm.middlename,
     lastnameElem = mainForm.lastname,
     imageElem = mainForm.image,
