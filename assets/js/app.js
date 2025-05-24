@@ -11,20 +11,20 @@ const validType = {
     TEXT_EMP: 'text_emp',
     EMAIL: 'email',
     DIGIT: 'digit',
-    PHONENO: 'phoneno',
+    PHONENO: 'numerotel',
     ANY: 'any',
 }
 
 // user inputs elements
 let primernombreElem = mainForm.primernombre,
-    middlenameElem = mainForm.middlename,
-    lastnameElem = mainForm.lastname,
+    middlenameElem = mainForm.segundonombre,
+    lastnameElem = mainForm.apellidos,
     imageElem = mainForm.image,
-    designationElem = mainForm.designation,
-    addressElem = mainForm.address,
+    designationElem = mainForm.puesto,
+    addressElem = mainForm.direccion,
     emailElem = mainForm.email,
-    phonenoElem = mainForm.phoneno,
-    summaryElem = mainForm.summary;
+    phonenoElem = mainForm.numerotel,
+    summaryElem = mainForm.resumen;
 
 // display elements
 let nameDsp = document.getElementById('fullname_dsp'),
@@ -89,7 +89,7 @@ const getUserInputs = () => {
     let skillElem = document.querySelectorAll('.skill');
 
     // event listeners for form validation
-    firstnameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT, 'First Name'));
+    firstnameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT, 'Primer Nombre'));
     middlenameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT_EMP, 'Middle Name'));
     lastnameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT, 'Last Name'));
     phonenoElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.PHONENO, 'Phone Number'));
@@ -194,7 +194,7 @@ const showListData = (listData, listContainer) => {
 }
 
 const displayCV = (userData) => {
-    nameDsp.innerHTML = userData.firstname + " " + userData.middlename + " " + userData.lastname;
+    nameDsp.innerHTML = userData.primernombre + " " + userData.segundonombre + " " + userData.apellidos;
     phonenoDsp.innerHTML = userData.phoneno;
     emailDsp.innerHTML = userData.email;
     addressDsp.innerHTML = userData.address;
