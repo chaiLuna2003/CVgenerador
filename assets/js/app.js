@@ -17,8 +17,8 @@ const validType = {
 
 // user inputs elements
 let primernombreElem = mainForm.primernombre,
-    middlenameElem = mainForm.segundonombre,
-    lastnameElem = mainForm.apellidos,
+    segundonombreElem = mainForm.segundonombre,
+    apellidosElem = mainForm.apellidos,
     imageElem = mainForm.image,
     designationElem = mainForm.puesto,
     addressElem = mainForm.direccion,
@@ -63,16 +63,16 @@ const fetchValues = (attrs, ...nodeLists) => {
 const getUserInputs = () => {
 
     // achivements 
-    let achievementsTitleElem = document.querySelectorAll('.achieve_title'),
-    achievementsDescriptionElem = document.querySelectorAll('.achieve_description');
+    let achievementsTitleElem = document.querySelectorAll('.logro_titulo'),
+    achievementsDescriptionElem = document.querySelectorAll('.descripcion_logro');
 
     // experiences
-    let expTitleElem = document.querySelectorAll('.exp_title'),
-    expOrganizationElem = document.querySelectorAll('.exp_organization'),
-    expLocationElem = document.querySelectorAll('.exp_location'),
-    expStartDateElem = document.querySelectorAll('.exp_start_date'),
-    expEndDateElem = document.querySelectorAll('.exp_end_date'),
-    expDescriptionElem = document.querySelectorAll('.exp_description');
+    let expTitleElem = document.querySelectorAll('.exp_titulo'),
+    expOrganizationElem = document.querySelectorAll('.exp_organizacion'),
+    expLocationElem = document.querySelectorAll('.exp_ubicacion'),
+    expStartDateElem = document.querySelectorAll('.exp_fecha_inicio'),
+    expEndDateElem = document.querySelectorAll('.exp_fecha_termino'),
+    expDescriptionElem = document.querySelectorAll('.exp_descripcion');
 
     // education
     let eduSchoolElem = document.querySelectorAll('.edu_school'),
@@ -84,14 +84,14 @@ const getUserInputs = () => {
 
     let projTitleElem = document.querySelectorAll('.proj_title'),
     projLinkElem = document.querySelectorAll('.proj_link'),
-    projDescriptionElem = document.querySelectorAll('.proj_description');
+    projDescriptionElem = document.querySelectorAll('.proj_description');   
 
     let skillElem = document.querySelectorAll('.skill');
 
     // event listeners for form validation
-    firstnameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT, 'Primer Nombre'));
-    middlenameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT_EMP, 'Middle Name'));
-    lastnameElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT, 'Last Name'));
+    primernombreElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT, 'Primer nombre'));
+    segundonombreElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT_EMP, 'Segundo nombre'));
+    apellidosElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.TEXT, 'apellidos'));
     phonenoElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.PHONENO, 'Phone Number'));
     emailElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.EMAIL, 'Email'));
     addressElem.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'Address'));
@@ -117,9 +117,9 @@ const getUserInputs = () => {
     skillElem.forEach(item => item.addEventListener('keyup', (e) => validateFormData(e.target, validType.ANY, 'skill')));
 
     return {
-        firstname: firstnameElem.value,
-        middlename: middlenameElem.value,
-        lastname: lastnameElem.value,
+        primernombre: primernombreElem.value,
+        segundonombre: segundonombreElem.value,
+        apellidos: apellidosElem.value,
         designation: designationElem.value,
         address: addressElem.value,
         email: emailElem.value,

@@ -121,7 +121,7 @@ a{
     flex-direction: column;
     justify-content: space-between;
     height: 16.5px;
-    width: 25px;
+    width: 20px;
 }
 .bars .bar{
     width: 100%;
@@ -201,7 +201,7 @@ a{
 .navbar-brand-icon{
     width: 25px;
     margin-right: 6px;
-    opacity: 0.8;
+    opacity: 0.10;
 }
 .brand-and-toggler{
     display: flex;
